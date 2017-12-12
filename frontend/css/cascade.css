@@ -1,0 +1,12 @@
+body {
+	font: 14px sans-serif;
+}
+span#specific {
+	background: pink;
+}
+span {
+	background: red !important;
+}
+span {
+	background: yellow;
+}

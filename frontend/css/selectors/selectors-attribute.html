@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a[href^="ftp://"] {
+            color: goldenrod;
+        }
+        a[href*="#"] {
+            color: cadetblue;
+        }
+        a[href$=".html"] {
+            color: dodgerblue;
+        }
+        a[href$=".pdf"] {
+            color: red;
+        }
+        a[href="about.html"] {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Attribute Selectors</h1>
+    <ul>
+        <li>
+            <a href='index.html'>HTML Page Link</a>
+        </li>
+        <li>
+            <a href='document.pdf'>PDF Link</a>
+        </li>
+        <li>
+            <a href='ftp://www.example.com/'>FTP Link</a>
+        </li>
+        <li>
+            <a href='http://www.example.com/#note'>Anchor Link</a>
+        </li>
+        <li>
+            <a href='about.html'>About Page Link</a>
+        </li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font: 14px sans-serif;
+            line-height: 30px;
+        }
+
+        span {
+            background: mistyrose;
+            border: 1px solid pink;
+        }
+
+        span.font1 {
+            font-family: "Perpetua Titling MT", serif;
+        }
+
+        span.font2 {
+            font-family: "Baskerville Old Face", serif;
+        }
+
+        span.font3 {
+            font-family: "Lucida Bright", monospace;
+        }
+
+        span.font4 {
+            font-family: Herculanum, "Eras Demi ITC", sans-serif;
+        }
+
+
+        span.oblique {
+            font-style: oblique;
+        }
+
+        span.italic {
+            font-style: italic;
+        }
+
+        p.naught {
+            font-family: "Monotype Corsiva";
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <body>
+        <h1>font-family</h1>
+        <p>
+            The font-family property allows you to specify a
+            <span class='font1'>font face</span>. It has the built-in ability of allowing you to
+            <span class='font2'>specify fallback fonts</span>,
+            <span class='font3'>
+                fonts that are used when your first choice (or choices) aren't installed on the end user's OS
+            </span>. Even though, these days, because of the dominance of the
+            <span class='font4'>Windows platform</span>, cross-platform fonting is less of an issue.
+        </p>
+
+        <hr>
+        <h1>font-style</h1>
+        <p>
+            When it comes to the font-style property,
+            <span class='oblique'>oblique</span> and
+            <span class='italic'>italic</span> are interchangeable.
+        </p>
+        <p class='naught'>
+            Some fonts have neither an oblique nor an italic style. Safari differs from IE, Firefox, and Opera on what to do when one
+            of these is encountered.
+        </p>
+        
+
+    </body>
+</body>
+
+</html>

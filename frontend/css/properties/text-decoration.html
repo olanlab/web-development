@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            font: 14px sans-serif;
+        }
+
+        p {
+            padding: 5px 25px;
+            background: lightblue;
+            border: 1px solid black;
+        }
+
+        span.underline {
+            text-decoration: underline;
+        }
+        span.overline {
+            text-decoration: overline;
+        }
+        span.line-through {
+            text-decoration: line-through;
+        }
+        span.underover {
+            text-decoration: underline overline;
+        }
+        span.underthrough {
+            text-decoration: underline line-through;
+        }
+        span.overthrough {
+            text-decoration: overline line-through;
+        }
+        span.example {
+            background: mistyrose;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h4>CSS's text-decoration Property</h4>
+    <p>
+        CSS supports four text-decoration styles, officially. Those are
+        <span class='underline example'>underline</span>,
+        <span class='overline example'>overline</span>,
+        <span class='line-through example'>line-through</span>, and
+        <span class='example'>blink</span>. IE and Safari do not support the extremely useless
+        <span class='example'>blink</span>
+        keyword.
+    </p>
+    <p>
+        It is also possible to combine text-decoration styles. You can for instance
+        <span class='underover example'>underline and overline text
+        </span>,
+        <span class='underthrough example'>underline and line-through text</span>, or
+        <span class='overthrough example'>overline and line-through text</span>, though it is unlikely you'd ever want to.
+    </p>
+</body>
+
+</html>

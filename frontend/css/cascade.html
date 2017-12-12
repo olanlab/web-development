@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel='stylesheet' type='text/css' href='cascade.css' />
+</head>
+
+<body>
+    <p>
+        Specificity is determined by how specific the selector is.
+        <span id='specific'>A specific selector wins</span>
+        over a
+        <span>more general one</span>.
+    </p>
+    <p>
+        Order isn't important until there are one or more elements of the same specificity referring to the same element. In which
+        case,
+        <span style="background: grey;">the last one wins</span>.
+    </p>
+</body>
+
+</html>
