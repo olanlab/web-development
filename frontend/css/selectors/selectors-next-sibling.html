@@ -1,11 +1,39 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        p {
+            padding: 5px;
+        }
+        h1+p {
+            background: lightyellow;
+            color: darkkhaki;
+            border: 1px solid darkkhaki;
+        }
+        h1+p+p {
+            background: yellowgreen;
+            color: green;
+            border: 1px solid green;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>Next Sibling Selectors</h1>
+    <p>
+        The next sibling selector (or adjacent sibling combinator as it's officially called) allows you to select an element based
+        on its sibling. This paragraph has a lightyellow background and darkkhaki text.
+    </p>
+    <p>
+        This paragraph has a yellowgreen background and green text.
+    </p>
+    <p>
+        This paragraph has no colored background, border, or text.
+    </p>
 </body>
+
 </html>

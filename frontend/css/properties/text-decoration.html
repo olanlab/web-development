@@ -7,16 +7,14 @@
     <title>Document</title>
 
     <style>
-        body {
-            font: 14px sans-serif;
-        }
-
         p {
             padding: 5px 25px;
             background: lightblue;
             border: 1px solid black;
         }
-
+        span {
+            background: mistyrose;
+        }
         span.underline {
             text-decoration: underline;
         }
@@ -29,15 +27,6 @@
         span.underover {
             text-decoration: underline overline;
         }
-        span.underthrough {
-            text-decoration: underline line-through;
-        }
-        span.overthrough {
-            text-decoration: overline line-through;
-        }
-        span.example {
-            background: mistyrose;
-        }
     </style>
 
 </head>
@@ -46,19 +35,11 @@
     <h4>CSS's text-decoration Property</h4>
     <p>
         CSS supports four text-decoration styles, officially. Those are
-        <span class='underline example'>underline</span>,
-        <span class='overline example'>overline</span>,
-        <span class='line-through example'>line-through</span>, and
-        <span class='example'>blink</span>. IE and Safari do not support the extremely useless
-        <span class='example'>blink</span>
+        <span class='underline'>underline</span>,
+        <span class='overline'>overline</span>,
+        <span class='line-through'>line-through</span>, and
+        <span class='underover'>blink</span>. IE and Safari do not support the extremely useless
         keyword.
-    </p>
-    <p>
-        It is also possible to combine text-decoration styles. You can for instance
-        <span class='underover example'>underline and overline text
-        </span>,
-        <span class='underthrough example'>underline and line-through text</span>, or
-        <span class='overthrough example'>overline and line-through text</span>, though it is unlikely you'd ever want to.
     </p>
 </body>
 

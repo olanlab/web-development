@@ -6,12 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-
+        p.note > span.code {
+            background: lightyellow;
+        }
     </style>
 </head>
 
 <body>
-    
+    <h1>Direct Child Selectors</h1>
+    <p class="note">
+        The note text is given different styles. To do this another
+        <del>descendant</del>
+        <ins>direct child</ins>
+        selector is used, this time the selector is
+        <span class='code'>p.note <ins>&gt;</ins> span.code</span>
+    </p>
 </body>
 
 </html>
