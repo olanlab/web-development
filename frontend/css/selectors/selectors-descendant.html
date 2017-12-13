@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            border: 1px solid rgb(200, 200, 200);
+            background: rgb(234, 234, 234);
+            padding: 5px;
+            margin: 5px;
+        }
+        p span.code {
+            background: yellow;
+        }
+        p.note span.code {
+            background: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Descendant Selectors</h1>
+    <p>
+        Descendant selectors apply styles based on ancestral relationships. The first descendant example I present applies style
+        to the
+        <span class='code'>&lt;span&gt;</span> element named
+        <em>code</em>, which is a descendant of
+        <span class='code'>&lt;p&gt;</span> elements. To do this, the selector
+        <span class='code'>p span.code</span> is used.
+    </p>
+    <p class='note'>
+        The note text is given different styles. To do this another descendant selector is used. This time the selector is
+        <span class='code'>p.note span.code </span>
+    </p>
+
+
+</body>
+
+</html>
