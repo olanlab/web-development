@@ -1,0 +1,21 @@
+<html lang="en">
+
+<head>
+    <script>
+        // --------------------------------------------------------
+        function doNothing() { /* empty */ }
+        alert(doNothing() === undefined); // true
+        // --------------------------------------------------------
+        function doNothing() {
+            return;
+        }
+        alert(doNothing() === undefined); // true
+       
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

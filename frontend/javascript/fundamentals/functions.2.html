@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <script>
+        function showMessage(from, text) { // arguments: from, text
+            alert(from + ': ' + text);
+        }
+        showMessage('Ann', 'Hello!'); // Ann: Hello! (*)
+        showMessage('Ann', "What's up?"); // Ann: What's up? (**)
+        // ------------------------------------------------------------------------------------
+        function showMessage1(from, text) {
+            from = '*' + from + '*'; // make "from" look nicer
+            alert(from + ': ' + text);
+        }
+
+        let from = "Ann";
+        showMessage1(from, "Hello"); // *Ann*: Hello
+        // the value of "from" is the same, the function modified a local copy
+        alert(from); // Ann
+        // ------------------------------------------------------------------------------------
+        function showMessage2(from, text = "no text given") {
+            alert(from + ": " + text);
+        }
+
+        showMessage2("Ann"); // Ann: no text given
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <script>
+        function showMessage() {
+            alert('Hello everyone!');
+        }
+        showMessage();
+        showMessage();
+        // ----------------------------------------------------------------------
+        function showMessage1() {
+            let message1 = "Hello, I'm JavaScript!"; // local variable
+            alert(message1);
+        }
+        showMessage1(); // Hello, I'm JavaScript!
+        alert(message1); // <-- Error! The variable is local to the function
+        // ----------------------------------------------------------------------
+        let userName2 = 'John';
+        function showMessage2() {
+            let message2 = 'Hello, ' + userName2;
+            alert(message2);
+        }
+        showMessage2(); // Hello, John
+        // ----------------------------------------------------------------------
+        let userName3 = 'John';
+        function showMessage3() {
+            let userName3 = "Bob"; // declare a local variable
+
+            let message3 = 'Hello, ' + userName3; // Bob
+            alert(message3);
+        }
+        // the function will create and use it's own userName
+        showMessage3();
+        alert(userName3); // John, unchanged, the function did not access the outer variable
+        // ----------------------------------------------------------------------
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
