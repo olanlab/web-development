@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <script>
+        alert("From HEAD: " + document.body); // null, there's no <body> yet
+    </script>
+</head>
+
+<body>
+
+    <script>
+        alert("From BODY: " + document.body); // HTMLBodyElement, now it exists
+    </script>
+
+</body>
+
+</html>
