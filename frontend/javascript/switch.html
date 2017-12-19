@@ -2,8 +2,8 @@
 
 <head>
     <script>
+        // ---------------------------------------------------
         let a = 2 + 2;
-
         switch (a) {
             case 3:
                 alert('Too small');
@@ -17,10 +17,9 @@
             default:
                 alert("I don't know such values");
         }
-/* 
-        let a = 2 + 2;
-
-        switch (a) {
+        // ---------------------------------------------------
+        let b = 2 + 2;
+        switch (b) {
             case 3:
                 alert('Too small');
             case 4:
@@ -30,27 +29,21 @@
             default:
                 alert("I don't know such values");
         }
-         */
-/*
-         let a = 2 + 2;
+        // ---------------------------------------------------
+        let c = 2 + 2;
+        switch (c) {
+            case 4:
+                alert('Right!');
+                break;
+            case 3: // (*) grouped two cases
+            case 5:
+                alert('Wrong!');
+                alert("Why don't you take a math class?");
+                break;
 
- switch (a) {
-  case 4:
-    alert('Right!');
-    break;
-
-  case 3:                    // (*) grouped two cases
-  case 5:
-    alert('Wrong!');
-    alert("Why don't you take a math class?");
-    break;
-
-  default:
-    alert('The result is strange. Really.');
-} */
-
-
-
+            default:
+                alert('The result is strange. Really.');
+        }
     </script>
 </head>
 

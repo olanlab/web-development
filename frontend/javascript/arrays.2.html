@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <script>
+        // POP
+        let fruits1 = ["Apple", "Orange", "Pear"];
+        alert(fruits1.pop()); // remove "Pear" and alert it
+        alert(fruits1); // Apple, Orange
+
+        // PUSH
+        let fruits2 = ["Apple", "Orange"];
+        fruits2.push("Pear");
+        alert(fruits2); // Apple, Orange, Pear
+
+        // SHIFT
+        let fruits3 = ["Apple", "Orange", "Pear"];
+        alert(fruits3.shift()); // remove Apple and alert it
+        alert(fruits3); // Orange, Pear
+
+        // UNSHIFT
+        let fruits4 = ["Orange", "Pear"];
+        fruits4.unshift('Apple');
+        alert(fruits4); // Apple, Orange, Pear
+
+        // PUSH, UNSHIFT
+        let fruits = ["Apple"];
+        fruits.push("Orange", "Peach");
+        fruits.unshift("Pineapple", "Lemon");
+
+        // ["Pineapple", "Lemon", "Apple", "Orange", "Peach"]
+        alert(fruits);    
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
