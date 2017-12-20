@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>The Selecter Example</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            var content = $("input").val();
+            $("p#pid2").text(content);
+        });
+    </script>
+
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="First Input Box" />
+    <input type="text" value="Second Input Box" />
+    <p class="green" id="pid1">This is
+        <i>first paragraph</i>.</p>
+    <p class="red" id="pid2">This is second paragraph.</p>
+</body>
+
+</html>

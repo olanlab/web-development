@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>The Selecter Example</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("p#pid").click(function () {
+                $(this).toggleClass("red");
+            });
+        });
+    </script>
+
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="green">Click following line to see the result</p>
+    <p class="red" id="pid">This is first paragraph.</p>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>The Selecter Example</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("#result1").text($("p#pid1").hasClass("red"));
+            $("#result2").text($("p#pid2").hasClass("red"));
+        });
+    </script>
+
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="red" id="pid1">This is first paragraph.</p>
+    <p class="green" id="pid2">This is second paragraph.</p>
+
+    <div id="result1"></div>
+    <div id="result2"></div>
+</body>
+
+</html>
