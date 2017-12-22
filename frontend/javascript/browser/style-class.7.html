@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            color: red;
+            margin: 5px
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let computedStyle = getComputedStyle(document.body);
+
+        // now we can read the margin and the color from it
+
+        alert(computedStyle.marginTop); // 5px
+        alert(computedStyle.color); // rgb(255, 0, 0)
+    </script>
+
+</body>
+
+</html>

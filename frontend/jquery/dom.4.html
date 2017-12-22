@@ -8,7 +8,7 @@
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
             $("div").click(function () {
-                $(this).remove();
+                $(this).before('<div class="div"></div>');
             });
         });
     </script>

@@ -7,8 +7,11 @@
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
-            $("div").click(function () {
-                $(this).remove();
+            $('div').bind('click', function (event) {
+                alert('Event type is ' + event.type);
+                alert('pageX : ' + event.pageX);
+                alert('pageY : ' + event.pageY);
+                alert('Target : ' + event.target.innerHTML);
             });
         });
     </script>
@@ -24,12 +27,11 @@
 </head>
 
 <body>
-    <p>Click on any square below:</p>
-    <span id="result"> </span>
+    <p>Click on any square below to see the result:</p>
 
-    <div class="div" style="background-color:blue;"></div>
-    <div class="div" style="background-color:green;"></div>
-    <div class="div" style="background-color:red;"></div>
+    <div class="div" style="background-color:blue;">ONE</div>
+    <div class="div" style="background-color:green;">TWO</div>
+    <div class="div" style="background-color:red;">THREE</div>
 </body>
 
 </html>

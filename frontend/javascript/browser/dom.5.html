@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="http://school.olanlab.com/file.zip">ZIP FILE</a>
+    <a href="http://share.olanlab.com">LINK</a>
+
+    <script>
+        // can be any collection instead of document.body.children
+        for (let elem of document.body.children) {
+            if (elem.matches('a[href$="zip"]')) {
+                alert("The archive reference: " + elem.href);
+            }
+        }
+    </script>
+</body>
+
+</html>

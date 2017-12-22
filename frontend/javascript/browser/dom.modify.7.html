@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .alert {
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <script>
+        let div = document.createElement('div');
+        div.className = "alert alert-success";
+        div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
+
+        document.body.append(div);
+        setTimeout(() => div.remove(), 1000);
+                // or setTimeout(() => document.body.removeChild(div), 1000);
+    </script>
+</body>
+
+</html>

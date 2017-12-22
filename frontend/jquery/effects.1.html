@@ -7,29 +7,36 @@
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
-            $("div").click(function () {
-                $(this).remove();
+
+            $("#show").click(function () {
+                $(".mydiv").show(1000);
             });
+
+            $("#hide").click(function () {
+                $(".mydiv").hide(1000);
+            });
+
         });
     </script>
 
     <style>
-        .div {
+        .mydiv {
             margin: 10px;
             padding: 12px;
             border: 2px solid #666;
-            width: 60px;
+            width: 100px;
+            height: 100px;
         }
     </style>
 </head>
 
 <body>
-    <p>Click on any square below:</p>
-    <span id="result"> </span>
+    <div class="mydiv">
+        This is a SQUARE
+    </div>
 
-    <div class="div" style="background-color:blue;"></div>
-    <div class="div" style="background-color:green;"></div>
-    <div class="div" style="background-color:red;"></div>
+    <input id="hide" type="button" value="Hide" />
+    <input id="show" type="button" value="Show" />
 </body>
 
 </html>

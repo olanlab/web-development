@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input>
+
+    <script>
+        let input = document.querySelector('input');
+
+        // attribute => property
+        input.setAttribute('id', 'id');
+        input.setAttribute('value', 'text');
+        alert(input.id); // id (updated)
+        alert(input.value); // text
+
+        // property => attribute
+        input.id = 'newId';
+        input.value = 'newValue';
+        alert(input.getAttribute('id')); // newId (updated)
+        alert(input.getAttribute('value')); // text (not updated!)
+    </script>
+</body>
+
+</html>

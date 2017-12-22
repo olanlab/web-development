@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .alert {
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+        }
+    </style>
+
+    <div class="alert" id="div">
+        <strong>Hi there!</strong> You've read an important message.
+    </div>
+
+    <script>
+        let div2 = div.cloneNode(true); // clone the message
+        div2.querySelector('strong').innerHTML = 'Bye there!'; // change the clone
+
+        div.after(div2); // show the clone after the existing div
+    </script>
+</body>
+
+</html>
