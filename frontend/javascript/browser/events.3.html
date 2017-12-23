@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="elem" type="button" value="Click me" />
+
+    <script>
+        function handler1() {
+            alert('Thanks!');
+        };
+
+        function handler2() {
+            alert('Thanks again!');
+        }
+
+        elem.onclick = () => alert("Hello");
+        elem.addEventListener("click", handler1); // Thanks!
+        elem.addEventListener("click", handler2); // Thanks again!
+    </script>
+</body>
+
+</html>

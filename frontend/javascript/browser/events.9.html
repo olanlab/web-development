@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="elem">Hello from the script!</h1>
+
+    <script>
+        // catch on document...
+        document.addEventListener("hello", function (event) { // (1)
+            alert("Hello from " + event.target.tagName); // Hello from H1
+        });
+
+        // ...dispatch on elem!
+        let event = new Event("hello", { bubbles: true }); // (2)
+        elem.dispatchEvent(event);
+    </script>
+</body>
+
+</html>

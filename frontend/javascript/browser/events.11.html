@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="menu">Menu (click me)</button>
+
+    <script>
+        // 1 -> nested -> 2
+        menu.onclick = function () {
+            alert(1);
+
+            // alert("nested")
+            menu.dispatchEvent(new CustomEvent("menu-open", {
+                bubbles: true
+            }));
+
+            alert(2);
+        };
+
+        document.addEventListener('menu-open', () => alert('nested'))
+    </script>
+</body>
+
+</html>

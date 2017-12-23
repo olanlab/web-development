@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function countRabbits() {
+            for (let i = 1; i <= 3; i++) {
+                alert("Rabbit number " + i);
+            }
+        }
+    </script>
+
+    <input type="button" onclick="countRabbits()" value="Count rabbits!">
+    <input id="elem" type="button" value="Click me">
+    <input id="elem2" type="button" value="Say Thank" >
+    <script>
+        elem.onclick = function () {
+            alert('Thank you');
+        };
+
+        function sayThanks() {
+            alert('Thanks!');
+        }
+
+        elem2.onclick = sayThanks;
+    </script>
+</body>
+
+</html>

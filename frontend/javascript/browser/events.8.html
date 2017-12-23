@@ -1,0 +1,17 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="elem" onclick="alert('Click!');">Autoclick</button>
+
+    <script>
+        let event = new Event("click");
+        elem.dispatchEvent(event);
+    </script>
+    
+</body>
+
+</html>

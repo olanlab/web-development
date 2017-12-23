@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="elem">Click me</button>
+
+    <script>
+        class Menu {
+            handleEvent(event) {
+                switch (event.type) {
+                    case 'mousedown':
+                        elem.innerHTML = "Mouse button pressed";
+                        break;
+                    case 'mouseup':
+                        elem.innerHTML += "...and released.";
+                        break;
+                }
+            }
+        }
+
+        let menu = new Menu();
+        elem.addEventListener('mousedown', menu);
+        elem.addEventListener('mouseup', menu);
+    </script>
+</body>
+
+</html>
