@@ -8,3 +8,6 @@ console.log('1|', math1.multiple(1, 2));
 console.log('2|', math2.add(1, 2));
 console.log('2|', math2.substract(1, 2));
 console.log('2|', math2.multiple(1, 2));
+
+
+
