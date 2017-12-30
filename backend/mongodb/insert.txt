@@ -1,0 +1,54 @@
+// Insert - Document เข้าไปใน Collection  ---------------------------------------------
+db.movie.insert({"name":"tutorials point"})
+
+db.mycol.insert({
+   title: 'MongoDB Overview', 
+   description: 'MongoDB is no sql database',
+   by: 'tutorials point',
+   url: 'http://www.tutorialspoint.com',
+   tags: ['mongodb', 'database', 'NoSQL'],
+   likes: 100
+})
+
+db.post.insert([{
+      title: 'MongoDB Overview', 
+      description: 'MongoDB is no sql database',
+      by: 'tutorials point',
+      url: 'http://www.tutorialspoint.com',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      likes: 100
+   },{title: 'NoSQL Database', 
+      description: 'NoSQL database doesn't have tables',
+      by: 'tutorials point',
+      url: 'http://www.tutorialspoint.com',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      likes: 20, 
+      comments: [	
+         {
+            user:'user1',
+            message: 'My first comment',
+            dateCreated: new Date(2013,11,10,2,35),
+            like: 0 
+         }
+      ]
+   }
+])
+
+// INSERT ONE, IT RETURN ID ---------------------------------------------------------------
+db.inventory.insertOne(
+   { item: "canvas", qty: 100, tags: ["cotton"], size: { h: 28, w: 35.5, uom: "cm" } }
+)
+
+// INSERT MANY ----------------------------------------------------------------------------
+db.inventory.insertMany([
+   { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+   { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+   { item: "mousepad", qty: 25, tags: ["gel", "blue"], size: { h: 19, w: 22.85, uom: "cm" } }
+])
+
+
+// ObjectId -------------------------------------------------------------------------------
+newObjectId = ObjectId(); // ObjectId("5349b4ddd2781d08c09890f3")
+myObjectId = ObjectId("5349b4ddd2781d08c09890f4"); 
+ObjectId("5349b4ddd2781d08c09890f4").getTimestamp();  // ISODate("2014-04-12T21:49:17Z")
+myObjectId.str // 5349b4ddd2781d08c09890f3

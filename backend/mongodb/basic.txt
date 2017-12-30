@@ -1,0 +1,15 @@
+// แสดง Database ทั้งหมด
+show dbs
+// ใช้ Database ที่ต้องการ ถ้าไม่มีอยู่จะทำการสร้างใหม่ให้
+use mydb
+
+// Create Collection ------------------------------------------------------------
+db.createCollection("mycollection")
+db.createCollection("mycol", { capped : true, autoIndexId : true, size : 6142800, max : 10000 } )
+
+// Drop - Collection ------------------------------------------------------------
+db.mycollection.drop()
+
+// CONSTAIN ---------------------------------------------------------------------
+// UNIQUE
+db.book.createIndex({name:1}, {unique:true});

@@ -1,0 +1,39 @@
+// MATCH STAGE
+db.sale.aggregate({$match: {item: "product A"}});
+db.sale.aggregate([{$match: {item: "product A"}}, {$sort: {quantity: -1}}]);
+db.sale.aggregate([{$match: {item: "product A"}}, {$sort: {quantity: -1}}, {$project : {_id : 0}}]);
+
+// GROUP STAGE
+db.sale.aggregate();
+db.sale.aggregate({$group: {_id: "$item"}});
+db.sale.aggregate({$group: {_id: "$item", count: { $sum : 1}}});
+db.sale.aggregate({$group: {_id: "$item", count: { $sum : 1}, totalQuantity : { $sum : "$quantity" }}});
+
+db.zip.aggregate({$group: {_id: "$state", totalPop: {$sum : "$pop"}}},{$sort : {totalPop : 1}});
+db.zip.aggregate({$group: {_id: "$state", totalPop: {$sum : "$pop"}, zipCount: {$sum: 1}}}, {$sort : {totalPop : 1}});
+
+db.zip.aggregate({$group : {_id: {state: "$state", city: "$city"}, pop : {$sum: "$pop"}}});
+
+db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : 1}}}]);
+
+
+db.zip.aggregate(
+    {$group : {_id: {state: "$state", city: "$city"}, pop : {$sum: "$pop"}}}, 
+    {$sort : {pop : 1}},
+    {$group : {
+        _id : "$_id.state",
+        biggestCity : {$last : "$_id.city"},
+        biggestPop : {$last : "$pop"},
+        smallestCity : {$first : "$_id.city"},
+        smallestPop : {$first : "$pop"}
+    }
+    },
+    {$sort : {_id : 1}}
+);
+
+
+
+
+
+
+

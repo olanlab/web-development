@@ -1,0 +1,7 @@
+// Explain ------------------------------------------------------------
+db.users.find({gender:"M"},{user_name:1,_id:0}).explain();
+
+
+// HINT ------------------------------------------------------------
+db.users.find({gender:"M"},{user_name:1,_id:0}).hint({gender:1,user_name:1});
+db.users.find({gender:"M"},{user_name:1,_id:0}).hint({gender:1,user_name:1}).explain();

@@ -1,0 +1,5 @@
+// DELETE MANY ---------------------------------------------
+db.inventory.deleteMany({ status : "A" })
+
+// DELETE ONE ---------------------------------------------
+db.inventory.deleteOne( { status: "D" } )

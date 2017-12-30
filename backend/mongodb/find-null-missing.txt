@@ -1,0 +1,22 @@
+// DATA ------------------------------------------------------------
+db.inventory.insertMany([
+   { _id: 1, item: null },
+   { _id: 2 }
+])
+
+// Equality Filter
+db.inventory.find( { item: null } )
+
+// Type Check
+db.inventory.find( { item : { $type: 10 } } )
+
+// Existence Check
+db.inventory.find( { item : { $exists: false } } )
+
+
+
+
+
+
+
+

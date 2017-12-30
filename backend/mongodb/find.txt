@@ -1,0 +1,49 @@
+------------------------------------------------------------
+// Find
+// ALL
+db.mycol.find().pretty()
+db.mycol.find({"by": "tutorials point"}).pretty();
+
+// AND 
+db.mycol.find({$and : [{"by": "tutorials point"}]}).pretty();
+db.mycol.find({$and : [{"by": "tutorials point"}, {"title": "MongoDB Overview"}]}).pretty();
+db.inventory.find( { status: "A", qty: { $lt: 30 } } );
+
+// IN
+db.inventory.find( { status: { $in: [ "A", "D" ] } } )
+
+// OR
+db.mycol.find({$or:[{"by":"tutorials point"}, {"title": "MongoDB Overview"}]}).pretty();
+db.inventory.find( { $or: [ { status: "A" }, { qty: { $lt: 30 } } ] } )
+
+
+// LESS THAN 
+db.mycol.find({"likes":{$lt:50}}).pretty();
+db.mycol.find({"likes":{$lte:50}}).pretty();
+
+// GREATER THAN
+db.mycol.find({"likes":{$gt:50}}).pretty();
+db.mycol.find({"likes":{$gte:50}}).pretty();
+
+// Not Equals
+db.mycol.find({"likes":{$ne:50}}).pretty();
+
+// MIX
+db.mycol.find({"likes": {$gt:10}, $or:[{"by":"tutorials point"}, {"title": "MongoDB Overview"}]}).pretty();
+db.inventory.find( {status: "A", $or: [ { qty: { $lt: 30 } }, { item: /^p/ } ]} );
+
+
+// Projection
+db.mycol.find({},{"title":1,_id:0}); 
+// 1 คือ แสดง, 0 คือ ไม่แสดง
+
+// LIMIT RECORDS ------------------------------------------------------------
+db.mycol.find({},{"title":1,_id:0}).limit(2);
+// SKIP RECORDS 
+db.mycol.find({},{"title":1,_id:0}).limit(1).skip(1);
+
+// SORT ------------------------------------------------------------
+db.mycol.find({},{"title":1,_id:0}).sort({"title":-1});
+// 1 น้อยไปมาก // -1 มากไปน้อย
+
+

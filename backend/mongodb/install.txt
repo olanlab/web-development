@@ -1,0 +1,26 @@
+// เปิด mongodb
+brew services start mongodb
+// ปิด mongodb
+brew services stop mongodb
+------------------------------------------------------------
+// แสดง packages ที่ติดตั้งทั้งหมด
+brew list 
+// แสดง services และ สถานะ
+brew services list
+// ติดตั้ง packages
+brew install <packagesname>
+// ลบ packages
+brew uninstall <packagesname> --force
+// อัพเดท brew และ packages
+brew update
+// อัพเกรด 
+brew upgrade
+brew upgrade <formula>
+// ลบ package Version เก่าออกจากเครื่อง เนื่องจาก  Homebrew จะไม่ลบ Version เก่าให้ 
+brew cleanup <packagesname>
+brew cleanup
+brew cleanup -n 
+// Clear cache
+brew --cache
+// เช็คว่า packages มี Version ใหม่กว่าหรือไม่ 
+brew outdated

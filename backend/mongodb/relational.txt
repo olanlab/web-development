@@ -1,0 +1,27 @@
+// RELATIONAL ------------------------------------------------------------
+db.users.findOne({"name":"Tom Benzamin"},{"address":1});
+
+var result = db.users.findOne({"name":"Tom Benzamin"},{"address_ids":1});
+var addresses = db.address.find({"_id":{"$in":result["address_ids"]}})
+
+
+/*
+{
+   "_id":ObjectId("53402597d852426020000002"),
+   "address": {
+   "$ref": "address_home",
+   "$id": ObjectId("534009e4d852427820000002"),
+   "$db": "tutorialspoint"},
+   "contact": "987654321",
+   "dob": "01-01-1991",
+   "name": "Tom Benzamin"
+}
+*/
+
+// DBRefs ------------------------------------------------------------
+var user = db.users.findOne({"name":"Tom Benzamin"})
+var dbRef = user.address
+db[dbRef.$ref].findOne({"_id":(dbRef.$id)})
+
+
+
