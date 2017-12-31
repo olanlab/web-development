@@ -1,0 +1,20 @@
+<html lang="en">
+
+<head>
+    <script>
+        let user4 = { name: "John" };
+        let admin = user4; // copy the reference
+        let clone = Object.assign({}, user4);
+        user4.name = "Sara";
+        
+        console.log('user4|', user4);
+        console.log('admin|', admin);
+        console.log('clone|', clone);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
