@@ -2,25 +2,23 @@
 
 <head>
     <script>
+        // ------------------------------------------------------------------
         let n = 2;
         n = n + 5;
         n = n * 2;
-
-        let n = 2;
-        n += 5; // now n = 7 (same as n = n + 5)
-        n *= 2; // now n = 14 (same as n = n * 2)
-        alert(n); // 14
-
-        let n = 2;
-        n *= 3 + 5;
-        alert(n); // 16  (right part evaluated first, same as n *= 8)
-
-        
+        alert(n);
+        // ------------------------------------------------------------------
+        let m = 2;
+        m += 5; // now m = 7 (same as m = m + 5)
+        m *= 2; // now m = 14 (same as m = m * 2)
+        alert(m); // 14
+        // ------------------------------------------------------------------
+        let o = 2;
+        o *= 3 + 5;
+        alert(o); // 16  (right part evaluated first, same as o *= 8)
     </script>
 </head>
 
-<body>
-
-</body>
+<body></body>
 
 </html>

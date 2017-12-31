@@ -2,16 +2,15 @@
 
 <head>
     <script>
-        let x = 1;
 
+        // --------------------------------------------------------
+        let x = 1;
         x = -x;
         alert(x); // -1, unary negation was applied
 
-
         let x = 1, y = 3;
         alert(y - x); // 2, binary minus subtracts values
-
-
+        // --------------------------------------------------------
         let s = "my" + "string";
         alert(s); // mystring
 
@@ -20,39 +19,28 @@
 
         alert(2 - '1'); // 1
         alert('6' / '2'); // 3
-
-
-        // No effect on numbers
+        // --------------------------------------------------------
+        // No effect on numbers 
         let x = 1;
         alert(+x); // 1
 
         let y = -2;
         alert(+y); // -2
-
-        // Converts non-numbers
+        // --------------------------------------------------------
+        // Converts non-numbers 
         alert(+true); // 1
         alert(+"");   // 0
-
-        let apples = "2";
-        let oranges = "3";
-        alert(apples + oranges); // "23", the binary plus concatenates strings
-
+        
+        // --------------------------------------------------------
         let apples = "2";
         let oranges = "3";
         // both values converted to numbers before the binary plus
         alert(+apples + +oranges); // 5
         // the longer variant
         // alert( Number(apples) + Number(oranges) ); // 5
-
-
-        
-
     </script>
-
 </head>
 
-<body>
-
-</body>
+<body></body>
 
 </html>
