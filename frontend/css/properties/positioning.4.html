@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font: 12px sans-serif;
+            background: lightyellow;
+        }
+
+        div#offset-four {
+            background: yellow;
+            border: 1px solid rgb(128, 128, 128);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        p {
+            margin: 0;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        p#offset-x {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            right: 123px;
+            background: gold;
+        }
+
+        p#offset-y {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            width: 100px;
+            background: khaki;
+        }
+
+        p#offset-four-copy {
+            border: none;
+            margin-right: 123px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='offset-four'>
+        <p id='offset-x'>
+            When the left and right offset properties are applied to the same element, width is implied.
+        </p>
+        <p id='offset-y'>
+            When the top and bottom offset properties are applied to the same element, height is implied.
+        </p>
+        <p id='offset-four-copy'>
+            When all four offset properties are specified on the same element both width and height are implied.
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            margin: 10px 110px;
+        }
+
+        div {
+            position: absolute;
+            background: yellow;
+            border: 1px solid black;
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+        }
+
+        div#top-left {
+            top: 0;
+            left: 0;
+        }
+
+        div#top-right {
+            top: 0;
+            right: 0;
+        }
+
+        div#bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+
+        div#bottom-right {
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Elements that are absolutely positioned are positioned, by default, relative to the browser's viewport. This is done using
+        the position property. The position property is used in conjunction with four offset properties, which are used to
+        control where on the screen an absolutely positioned element is placed.
+    </p>
+    <div id='top-left'>
+        Top, Left
+    </div>
+    <div id='top-right'>
+        Top, Right
+    </div>
+    <div id='bottom-left'>
+        Bottom, Left
+    </div>
+    <div id='bottom-right'>
+        Bottom, Right
+    </div>
+</body>
+
+</html>
