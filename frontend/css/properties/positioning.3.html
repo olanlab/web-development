@@ -6,18 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        body {
-            font: 12px sans-serif;
-            background: lightyellow;
-        }
-
         p {
             padding: 5px;
             margin-left: 110px;
-        }
-
-        p#long {
-            height: 400px;
         }
 
         div {
@@ -41,24 +32,14 @@
 </head>
 
 <body>
-    <div id='fixed-top'>
-    </div>
-    <div id='fixed-bottom'>
-    </div>
+    <div id='fixed-top'></div>
+    <div id='fixed-bottom'></div>
     <p>
         The concept of fixed positioning is pretty straightforward. Elements with a fixed position stay in place, even when a document
         is scrolled. Elements with a fixed position are always positioned relative to the browser's viewport, no matter where
         they appear in a document's structure.
     </p>
-    <p>
-        IE 6 and IE 7 in quirks mode do not support fixed positioning, even though IE 7 in standards mode does support fixed positioning.
-        Some tricks are employed to make the document work in IE 6, in standards mode.
-    </p>
-    <p>
-        Even though fixed positioning technically allows an element to be placed anywhere in the document's structure, the IE hacks
-        that I present here require that fixed position elements always be immediate children of the &lt;body&gt; element.
-    </p>
-    <p id='long'>
+    <p style="height: 700px;">
         This element is used to make the document longer, so that scroll bars are invoked.
     </p>
 </body>
