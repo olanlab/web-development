@@ -1,19 +1,3 @@
 ฝึกนักสร้างเว็บไซต์ จาก ผู้เริ่มต้น ไปเป็น มือโปร
 ========================================
-หลักสูตรที่คุณจะได้เรียนรู้การพัฒนาเว็บไซต์ล่าสุดด้วย HTML, CSS, JS, Node และอื่นๆ
-
-
-เนื้อหาประกอบด้วย
-----------------------------------------
-1. HTML
-2. CSS
-3. Javascript
-4. JQuery
-5. Bootstrap
-6. Javascript ES5, ES6
-7. Node.js
-8. ExpressJs
-9. MongoDB
-10. Git
-
-
+Source Code ตัวอย่างสำหรับ "ฝึกนักสร้างเว็บไซต์ จาก ผู้เริ่มต้น ไปเป็น มือโปร" ประกอบด้วย HTML, CSS, Javascript, JQuery, Bootstrap, Javascript ES5 | ES6, Node.js, ExpressJS, MongoDB, Git
