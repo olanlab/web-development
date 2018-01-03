@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>The jQuery Example</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" language="javascript">
+        // JQuery 
+        $(document).ready(function () {
+            var hiddenBox = $("#banner-message");
+            $("button#button-container").on("click", function (event) {
+                hiddenBox.show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    
+    <script>
+        // Javascript
+        var hiddenBox = document.getElementById("banner-message");
+        var button = document.getElementById("button-container");
+        button.onclick = function () {
+            hiddenBox.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

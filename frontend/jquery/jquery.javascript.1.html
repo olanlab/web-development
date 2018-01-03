@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>The jQuery Example</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" language="javascript">
+        // JQuery 
+        $(document).ready(function () {
+            $("button.continue").html("share.olanlab.com");
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <button class="continue">BUTTON</button>
+    <button class="continue2">BUTTON</button>
+
+    <script>
+        // Javascript
+        var buttons = document.getElementsByClassName("continue2");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].innerHTML = "share.olanlab.com";
+        }
+    </script>
+
+</body>
+
+</html>
