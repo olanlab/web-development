@@ -3,7 +3,7 @@ var name1 = "Luna";
 if (true) {
 	var name1 = "Ken";
 }
-console.log("1|", name1);
+console.log("1|", name1); 
 
 // LET ----------------------------------------------------------
 let name2 = "Luna2";
@@ -11,7 +11,6 @@ if (true) {
 	let name2 = "Ken2";
 	console.log("2|", name2);
 }
-
 console.log("2|", name2);
 
 // CONST ----------------------------------------------------------
