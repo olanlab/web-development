@@ -13,5 +13,3 @@ console.log(`greet2| ${name2}`);
 // ----------------------------------------------------------------------
 var greet3 = (firstname, lastname) => firstname + ' ' + lastname
 console.log(`greet3| ${greet3('Gamer', 'Soney')}`);
-
-

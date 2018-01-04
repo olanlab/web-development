@@ -3,9 +3,9 @@ function createUser(person) {
 	const age = person.age || 18;
 	return `${name} (age: ${age})`;
 }
-console.log(createUser({ age: 10, name: "Lucy" }));
+console.log(createUser({ age: 10, name: "Lucy" })); // Lucy (age: 10)
 // ------------------------------------------------------------------------
 function createUser1({ age = 18, name = "Nana" } = {}) {
 	return `${name} (age: ${age})`;
 }
-console.log(createUser1());
+console.log(createUser1()); 						//	Nana (age: 18)
