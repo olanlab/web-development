@@ -1,9 +1,5 @@
 <html lang="en">
 
-<head>
-    <title>Document</title>
-</head>
-
 <body>
     <table id="table">
         <tr>
@@ -24,13 +20,10 @@
 
     <script>
         let inputs = table.getElementsByTagName('input');
-
         for (let input of inputs) {
             alert(input.value + ': ' + input.checked);
         }
-        
         alert(inputs[0].value + ': ' + inputs[0].checked);
-
     </script>
 
 </body>
