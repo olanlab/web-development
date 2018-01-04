@@ -5,22 +5,18 @@
         <tr>
             <td>Your age:</td>
             <td>
-                <label>
-                    <input type="radio" name="age" value="young" checked> less than 18
-                </label>
-                <label>
-                    <input type="radio" name="age" value="mature"> more than 18
-                </label>
+                <label><input type="radio" name="age" value="young" checked> less than 18</label>
+                <label><input type="radio" name="age" value="mature"> more than 18</label>
             </td>
         </tr>
     </table>
 
     <script>
-        let inputs = table.getElementsByTagName('input');
+        let inputs = document.getElementsByTagName('input');
         for (let input of inputs) {
             alert(input.value + ': ' + input.checked);
         }
-        // alert(inputs[0].value + ': ' + inputs[0].checked);
+        alert(inputs[0].value + ': ' + inputs[0].checked);
     </script>
 </body>
 
