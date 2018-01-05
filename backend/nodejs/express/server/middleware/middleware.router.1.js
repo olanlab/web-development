@@ -34,8 +34,9 @@ router.get("/user/:id", function(req, res, next) {
 );
 
 router.get("/user/:id", function(req, res, next) {
-	console.log("", req.params.id);
-	res.render("special");
+	console.log("id", req.params.id);
+	// res.render("special");
+	res.send("user id : " + req.params.id);
 });
 
 app.use("/", router);
