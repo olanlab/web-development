@@ -12,11 +12,3 @@ db.inventory.find( { item : { $type: 10 } } )
 
 // Existence Check
 db.inventory.find( { item : { $exists: false } } )
-
-
-
-
-
-
-
-

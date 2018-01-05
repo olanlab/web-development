@@ -16,7 +16,3 @@ db.inventory.find( { "size.h": { $lt: 15 } } )
 db.inventory.find( { "size.h": { $lt: 15 }, "size.uom": "in", status: "D" } )
 
 // Projection
-
-
-
-

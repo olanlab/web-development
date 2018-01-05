@@ -25,5 +25,3 @@ db.inventory.find( { "instock": { $elemMatch: { qty: { $gt: 10, $lte: 20 } } } }
 
 db.inventory.find( { "instock.qty": { $gt: 10,  $lte: 20 } } )
 db.inventory.find( { "instock.qty": 5, "instock.warehouse": "A" } )
-
-
