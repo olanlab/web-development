@@ -6,25 +6,19 @@ app.use(function(req, res, next) {
 	next();
 });
 
-app.use(
-	"/user/:id",
-	function(req, res, next) {
+app.use("/user/:id", function(req, res, next) {
 		console.log("Request URL:", req.originalUrl);
 		next();
-	},
-	function(req, res, next) {
+	}, function(req, res, next) {
 		console.log("Request Type:", req.method);
 		next();
 	}
 );
 
-app.get(
-	"/user/:id",
-	function(req, res, next) {
+app.get("/user/:id", function(req, res, next) {
 		console.log("ID:", req.params.id);
 		next();
-	},
-	function(req, res, next) {
+	}, function(req, res, next) {
 		res.send('User Info')
 		next();
 	}

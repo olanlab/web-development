@@ -11,21 +11,16 @@ router.use(function(req, res, next) {
 	next();
 });
 
-router.use(
-	"/user/:id",
-	function(req, res, next) {
+router.use("/user/:id", function(req, res, next) {
 		console.log("Request URL:", req.originalUrl);
 		next();
-	},
-	function(req, res, next) {
+	}, function(req, res, next) {
 		console.log("Request Type:", req.method);
 		next();
 	}
 );
 
-router.get(
-	"/user/:id",
-	function(req, res, next) {
+router.get("/user/:id", function(req, res, next) {
 		if (req.params.id === "0") {
 			console.log('Get|', 'req.params.id === 0');
 			next("route");
@@ -33,8 +28,7 @@ router.get(
 			console.log('Get|', 'req.params.id ');
 			next();
 		}
-	},
-	function(req, res, next) {
+	}, function(req, res, next) {
 		res.render("regular");
 	}
 );
