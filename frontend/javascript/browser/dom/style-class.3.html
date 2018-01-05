@@ -2,9 +2,9 @@
 
 <body class="main page">
     <script>
-        // add a class
-        document.body.classList.add('article');
-        alert(document.body.className); // main page article
+        for (let name of document.body.classList) {
+            alert(name); // main, and then page
+        }
     </script>
 </body>
 
