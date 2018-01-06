@@ -2,6 +2,8 @@
 show dbs
 // ใช้ Database ที่ต้องการ ถ้าไม่มีอยู่จะทำการสร้างใหม่ให้
 use mydb
+// แสดง collection ที่อยู่ใน database 
+show collections
 
 // Create Collection ------------------------------------------------------------
 db.createCollection("mycollection")
