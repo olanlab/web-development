@@ -6,12 +6,12 @@ use mydb
 show collections
 
 // Create Collection ------------------------------------------------------------
-db.createCollection("mycollection")
-db.createCollection("mycol", { capped : true, autoIndexId : true, size : 6142800, max : 10000 } )
+db.createCollection("products")
+db.createCollection("products", { capped : true, autoIndexId : true, size : 6142800, max : 10000 } )
 
 // Drop - Collection ------------------------------------------------------------
-db.mycollection.drop()
+db.products.drop()
 
 // CONSTAIN ---------------------------------------------------------------------
 // UNIQUE
-db.book.createIndex({name:1}, {unique:true});
+db.products.createIndex({name:1}, {unique:true});

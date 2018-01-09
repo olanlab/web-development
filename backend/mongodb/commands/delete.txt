@@ -1,5 +1,5 @@
 // DELETE MANY ---------------------------------------------
-db.inventory.deleteMany({ status : "A" })
+db.products.deleteMany({ status : "Active" })
 
 // DELETE ONE ---------------------------------------------
-db.inventory.deleteOne( { status: "D" } )
+db.products.deleteOne( { status: "Inactive" } )

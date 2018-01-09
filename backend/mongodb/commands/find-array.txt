@@ -1,27 +1,27 @@
 // DATA --------------------------------------------------------------------------------
-db.inventory.insertMany([
-   { item: "journal", qty: 25, tags: ["blank", "red"], dim_cm: [ 14, 21 ] },
-   { item: "notebook", qty: 50, tags: ["red", "blank"], dim_cm: [ 14, 21 ] },
-   { item: "paper", qty: 100, tags: ["red", "blank", "plain"], dim_cm: [ 14, 21 ] },
-   { item: "planner", qty: 75, tags: ["blank", "red"], dim_cm: [ 22.85, 30 ] },
-   { item: "postcard", qty: 45, tags: ["blue"], dim_cm: [ 10, 15.25 ] }
+db.products.insertMany([
+   { name: "journal", qty: 25, tags: ["blank", "red"], dim_cm: [ 14, 21 ] },
+   { name: "notebook", qty: 50, tags: ["red", "blank"], dim_cm: [ 14, 21 ] },
+   { name: "paper", qty: 100, tags: ["red", "blank", "plain"], dim_cm: [ 14, 21 ] },
+   { name: "planner", qty: 75, tags: ["blank", "red"], dim_cm: [ 22.85, 30 ] },
+   { name: "postcard", qty: 45, tags: ["blue"], dim_cm: [ 10, 15.25 ] }
 ]);
 
 // MATCH
-db.inventory.find( { tags: ["red", "blank"] } )
+db.products.find( { tags: ["red", "blank"] } )
 
 // tags have red, blank | no care order or other element in array
-db.inventory.find( { tags: { $all: ["red", "blank"] } } )
+db.products.find( { tags: { $all: ["red", "blank"] } } )
 
 // 
-db.inventory.find( { tags: "red" } )
-db.inventory.find( { dim_cm: { $gt: 25 } } )
-db.inventory.find( { dim_cm: { $gt: 15, $lt: 20 } } )
+db.products.find( { tags: "red" } )
+db.products.find( { dim_cm: { $gt: 25 } } )
+db.products.find( { dim_cm: { $gt: 15, $lt: 20 } } )
 // 
-db.inventory.find( { dim_cm: { $elemMatch: { $gt: 22, $lt: 30 } } } )
+db.products.find( { dim_cm: { $elemMatch: { $gt: 22, $lt: 30 } } } )
 
 // INDEX
-db.inventory.find( { "dim_cm.1": { $gt: 25 } } )
+db.products.find( { "dim_cm.1": { $gt: 25 } } )
 
 // ARRAY LENGTH
-db.inventory.find( { "tags": { $size: 3 } } )
+db.products.find( { "tags": { $size: 3 } } )

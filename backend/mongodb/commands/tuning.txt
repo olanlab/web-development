@@ -1,4 +1,4 @@
 // INDEXING ------------------------------------------------------------
-db.mycol.ensureIndex({"title":1});
+db.products.ensureIndex({"name":1});
 
 

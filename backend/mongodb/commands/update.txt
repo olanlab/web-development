@@ -1,11 +1,11 @@
 // UPDATE --------------------------------------------------------------------------------------------
-db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}});
+db.products.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}});
 
 // UPDATE MULTI ---------------------------------------------------------------------------------------
-db.mycol.update({'title':'MongoDB Overview'}, {$set:{'title':'New MongoDB Tutorial'}},{multi:true});
+db.products.update({'title':'MongoDB Overview'}, {$set:{'title':'New MongoDB Tutorial'}},{multi:true});
 
 // DATA  ----------------------------------------------------------------------------------------------
-db.inventory.insertMany( [
+db.products.insertMany( [
    { item: "canvas", qty: 100, size: { h: 28, w: 35.5, uom: "cm" }, status: "A" },
    { item: "journal", qty: 25, size: { h: 14, w: 21, uom: "cm" }, status: "A" },
    { item: "mat", qty: 85, size: { h: 27.9, w: 35.5, uom: "cm" }, status: "A" },
@@ -19,7 +19,7 @@ db.inventory.insertMany( [
 ]);
 
 // Update a Single Document ---------------------------------------------------------------------------
-db.inventory.updateOne(
+db.products.updateOne(
    { item: "paper" },
    {
      $set: { "size.uom": "cm", status: "P" },
@@ -28,7 +28,7 @@ db.inventory.updateOne(
 )
 
 // Update Multiple Documents ---------------------------------------------------------------------------
-db.inventory.updateMany(
+db.products.updateMany(
    { "qty": { $lt: 50 } },
    {
      $set: { "size.uom": "in", status: "P" },
@@ -37,7 +37,7 @@ db.inventory.updateMany(
 )
 
 // REPLACE ---------------------------------------------------------------------------
-db.inventory.replaceOne(
+db.products.replaceOne(
    { item: "paper" },
    { item: "paper", instock: [ { warehouse: "A", qty: 60 }, { warehouse: "B", qty: 40 } ] }
 )
