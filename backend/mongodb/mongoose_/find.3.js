@@ -31,5 +31,5 @@ User.find().sort({firstname: -1}).limit(1).skip(1).select({firstname: 1}).exec((
     if(err) {
         console.log(err);
     }
-    console.log('User.find - sort, limit, skip|', data);        // Array
+    console.log('User.find - sort, limit, skip, select|', data);        // Array
 })

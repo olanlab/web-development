@@ -2,8 +2,7 @@ var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/test");
 mongoose.Promise = global.Promise;
 
-var Schema = mongoose.Schema;
-var userSchema = new Schema({
+var userSchema = mongoose.Schema({
 	firstname: { type: String, required: true },
 	lastname: String,
 	email: { type: String, required: true, trim: true, lowercase: true },
