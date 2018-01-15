@@ -8,13 +8,18 @@
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
             $("#driver").click(function (event) {
-
-                $.getJSON('result.1.json', function (jd) {
-                    $('#stage').html('<p> Name: ' + jd.name + '</p>');
-                    $('#stage').append('<p>Age : ' + jd.age + '</p>');
-                    $('#stage').append('<p> Sex: ' + jd.sex + '</p>');
+                $.ajax({
+                    type: 'GET',
+                    url: 'result.2.json',
+                    dataType:"json", cache:false,
+                    success: function (data) {
+                        data.forEach(element => {
+                            $('#stage').append('<p> Name: ' + element.name + '</p>');
+                            $('#stage').append('<p>Age : ' + element.age + '</p>');
+                            $('#stage').append('<p> Sex: ' + element.sex + '</p>');
+                        });
+                    }
                 });
-
             });
         });
     </script>
