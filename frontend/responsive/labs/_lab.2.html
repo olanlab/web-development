@@ -45,11 +45,35 @@
             <div class="col-md-7">
                 <h1 style="margin-top: 10px;">Chiang Mai</h1>
                 <hr>
-                <p class="text-justify">Chiang Mai is a city in mountainous northern Thailand. Founded in 1296, it was capital of the independent Lanna Kingdom until 1558. Its Old City area still retains vestiges of walls and moats from its history as a cultural and religious center. It’s also home to hundreds of elaborate Buddhist temples, including 14th-century Wat Phra Singh and 15th-century Wat Chedi Luang, adorned with carved serpents.</p>
-                <button class="btn btn-info btn-block">Booking</button>
+                <p class="text-justify">Chiang Mai is a city in mountainous northern Thailand. Founded in 1296, it was capital of the independent
+                    Lanna Kingdom until 1558. Its Old City area still retains vestiges of walls and moats from its history
+                    as a cultural and religious center. It’s also home to hundreds of elaborate Buddhist temples, including
+                    14th-century Wat Phra Singh and 15th-century Wat Chedi Luang, adorned with carved serpents.</p>
+                <button class="btn btn-info btn-block" data-toggle="modal"   data-target="#modal">Booking</button>
             </div>
         </div>
     </div>
+
+    <div class="modal" id="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Booking</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Your booking already success.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
