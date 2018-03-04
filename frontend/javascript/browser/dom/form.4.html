@@ -1,9 +1,13 @@
 <html lang="en">
 
 <body>
-    <form onsubmit="alert('submit!');return false">
+    <form 
+        method="GET"
+        action="https://www.google.com/search"
+        onsubmit="event.preventDefault();"
+    >
         First: Enter in the input field
-        <input type="text" value="text">
+        <input type="text" name="q" value="">
         <br> Second: Click "submit":
         <input type="submit" value="Submit">
     </form>

@@ -1,5 +1,17 @@
 <html lang="en">
 <body>
-    <button onclick="alert(this.innerHTML)">Click me</button>
+    <button 
+        onclick="alert(this.innerHTML)"
+        onmouseover="this.style.color = 'red';"
+        onmouseout="this.style.color = 'black';"
+    >Click me</button>
+    
+    <input type="text" value="" 
+        onkeydown=""
+        onkeypress=""
+        onkeyup=""
+        onchange="console.log(this.value);"
+    >
+
 </body>
 </html>

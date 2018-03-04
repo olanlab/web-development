@@ -8,14 +8,16 @@
             // show event type, element and coordinates of the click
             alert(event.type + " at " + event.currentTarget);
             alert("Coordinates: " + event.clientX + ":" + event.clientY);
+            console.log(event);
         };
     </script>
 
-    <button id="elem">Click me</button>
+    <button id="elem2">Click me</button>
     <script>
-        elem.addEventListener('click', {
+        elem2.addEventListener('click', {
             handleEvent(event) {
                 alert(event.type + " at " + event.currentTarget);
+                alert("Coordinates: " + event.clientX + ":" + event.clientY);
             }
         });
     </script>

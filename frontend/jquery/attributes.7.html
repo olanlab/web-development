@@ -2,16 +2,16 @@
 
 <head>
     <title>The Selecter Example</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    <script 
+        type="text/javascript" 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
     </script>
-
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
             var content = $("p#pid1").text();
             $("#pid2").html(content);
         });
     </script>
-
     <style>
         .red {
             color: red;
@@ -22,11 +22,8 @@
         }
     </style>
 </head>
-
 <body>
-    <p class="green" id="pid1">This is
-        <i>first paragraph</i>.</p>
+    <p class="green" id="pid1">This is <i>first paragraph</i>.</p>
     <p class="red" id="pid2">This is second paragraph.</p>
 </body>
-
 </html>

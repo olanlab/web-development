@@ -9,7 +9,7 @@
         $(document).ready(function () {
             $("#driver").click(function (event) {
                 $.getJSON('result.2.json', function (data) {
-                    data.forEach(element => {
+                    data.forEach(function(element) {
                         $('#stage').append('<p> Name: ' + element.name + '</p>');
                         $('#stage').append('<p>Age : ' + element.age + '</p>');
                         $('#stage').append('<p> Sex: ' + element.sex + '</p>');

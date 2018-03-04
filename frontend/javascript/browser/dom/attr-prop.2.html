@@ -1,14 +1,19 @@
 <html lang="en">
 
 <body>
-    <div id="elem" about="Elephant"></div>
+    <div id="elem"  about="Elephant"></div>
     <script>
-        alert(elem.getAttribute('About')); // (1) 'Elephant', reading
-        elem.setAttribute('Test', 123); // (2), writing
-        alert(elem.outerHTML); // (3), see it's there
+        console.log(elem.getAttribute('about')); // (1) 'Elephant', reading
+        console.log(elem.hasAttribute('class'));
+        elem.setAttribute('test', 123); // (2), writing
+        console.log(elem.outerHTML); // (3), see it's there
+
+        elem.removeAttribute('about');
+        console.log(elem.outerHTML); // (3), see it's there
 
         for (let attr of elem.attributes) { // (4) list all
-            alert(`${attr.name} = ${attr.value}`);
+            // console.log(`${attr.name} = ${attr.value}`);
+            console.log(attr.name + ' = ' + attr.value);
         }
     </script>
 </body>

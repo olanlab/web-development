@@ -2,15 +2,15 @@
 
 <head>
     <title>The jQuery Example</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    <script 
+        type="text/javascript" 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
     </script>
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
             $(".clickme").click(function (event) {
-                $(".target").toggle('slow', function () {
-                    $(".log").text('Transition Complete');
-                });
+                $(".target").toggle('slow');
             });
         });
     </script>
@@ -30,7 +30,7 @@
     <div class="content">
         <div class="clickme">Click Me</div>
         <div class="target">
-            <img src="images/dog1.jpg" alt="jQuery" />
+            <img src="images/dog1.jpg" alt="jQuery" width="300" />
         </div>
         <div class="log"></div>
     </div>

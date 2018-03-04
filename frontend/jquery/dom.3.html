@@ -7,9 +7,11 @@
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
-            $("div").click(function () {
-                $(this).remove();
-            });
+            // $("div").click(function () {
+            //     $(this).remove();
+            // });
+            $('div#div3').remove();
+
         });
     </script>
 
@@ -27,9 +29,9 @@
     <p>Click on any square below:</p>
     <span id="result"> </span>
 
-    <div class="div" style="background-color:blue;"></div>
-    <div class="div" style="background-color:green;"></div>
-    <div class="div" style="background-color:red;"></div>
+    <div id="div1" class="div" style="background-color:blue;"></div>
+    <div id="div2" class="div" style="background-color:green;"></div>
+    <div id="div3" class="div" style="background-color:red;"></div>
 </body>
 
 </html>

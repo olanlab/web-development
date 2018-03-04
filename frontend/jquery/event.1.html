@@ -7,8 +7,13 @@
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
-            $('div').bind('click', function (event) {
-                alert('Hi there!');
+            // 1
+            $('div').mousedown(function(event) {
+                console.log('Hi there1!');
+            });
+            // 2
+            $('div').bind('mouseout', function (event) {
+                console.log('Hi there2!');
             });
         });
     </script>

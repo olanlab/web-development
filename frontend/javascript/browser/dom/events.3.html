@@ -12,7 +12,7 @@
             alert('Thanks again!');
         }
 
-        elem.onclick = () => alert("Hello");
+        elem.onclick = function() {alert("Hello")};
         elem.addEventListener("click", handler1); // Thanks!
         elem.addEventListener("click", handler2); // Thanks again!
     </script>

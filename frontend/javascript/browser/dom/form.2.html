@@ -2,15 +2,18 @@
 
 <body>
     <form>
-        <input type="radio" name="age" value="10">
-        <input type="radio" name="age" value="20">
+        <input type="radio" name="age" value="10">10
+        <input type="radio" name="age" value="20">20
     </form>
 
+    <form>
+            <input type="radio" name="age" value="30">30
+            <input type="radio" name="age" value="40">40
+        </form>
+
     <script>
-        let form = document.forms[0];
-
+        let form = document.forms[1];
         let ageElems = form.elements.age;
-
         alert(ageElems[0].value); // 10, the first input value
     </script>
 </body>
