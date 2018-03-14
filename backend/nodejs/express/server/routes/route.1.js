@@ -2,10 +2,12 @@ var express = require("express");
 var app = express();
 
 app.get("/", (req, res) => {
-	res.send("hello world");
+	res.send("hello world!!!!");
 });
 
-app.get("/users/:userId", (req, res) => {
+// http://127.0.0.1:3000/users?userId=jame // Query Parameter
+// http://127.0.0.1:3000/users/jame // URL Parameter
+app.get("/users2/:userIdVIP", (req, res) => {
     res.send(req.params);
 });
 

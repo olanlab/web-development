@@ -5,7 +5,7 @@ span#specific {
 	background: pink;
 }
 span {
-	background: red !important;
+	background: red ;
 }
 span {
 	background: yellow;

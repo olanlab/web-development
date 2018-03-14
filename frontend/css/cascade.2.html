@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <style>
+        body {
+            font: 14px sans-serif;
+        }
+
+        span#specific {
+            background: pink;
+        }
+
+        span.red {
+            background: red;
+        }
+
+        span {
+            background: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>
+        Specificity is determined by how specific the selector is.
+        <span id='specific' class="red">A specific selector wins</span>
+        over a
+        <span>more general one</span>.
+    </p>
+</body>
+
+</html>
