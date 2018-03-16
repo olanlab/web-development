@@ -2,8 +2,8 @@ var express = require("express");
 var path = require("path");
 var app = express();
 
-app.use(express.static("public"));
-// app.use("/asset", express.static("public"));
+// app.use(express.static("public"));
+app.use("/asset2", express.static("public"));
 
 app.get("/", (req, resp) => {
 	resp.send("Hello world");
