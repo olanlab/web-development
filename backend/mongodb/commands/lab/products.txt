@@ -1,2 +1,59 @@
-
-
+db.products.deleteMany({});
+============================================================
+db.products.insertMany([
+    {
+        product_name: "Kare Raisu (Curry Rice)", thumbnail: "https://www.japan-guide.com/g7/2035_curry.jpg", 
+        unit_price: 290, discount_price: 200, discount_active: true, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+    {
+        product_name: "Donburi", thumbnail: "https://www.japan-guide.com/g7/2043_donburi.jpg", 
+        unit_price: 190, discount_price: 150, discount_active: false, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+    {
+        product_name: "Rice Balls (Onigiri)", thumbnail: "https://www.japan-guide.com/g7/2043_onigiri.jpg", 
+        unit_price: 100, discount_price: 90, discount_active: true, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+    {
+        product_name: "Sushi", thumbnail: "https://www.japan-guide.com/g7/2043_sushi.jpg", 
+        unit_price: 320, discount_price: 300, discount_active: true, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+    {
+        product_name: "Chazuke (Ochazuke)", thumbnail: "https://www.japan-guide.com/g7/2043_ochazuke.jpg", 
+        unit_price: 150, discount_price: 120, discount_active: false, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+    {
+        product_name: "Kayu", thumbnail: "https://www.japan-guide.com/g17/2035_02.jpg", 
+        unit_price: 80, discount_price: 60, discount_active: true, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+    {
+        product_name: "Yakizakana", thumbnail: "https://www.japan-guide.com/g7/2035_yakizakana.jpg", 
+        unit_price: 180, discount_price: 100, discount_active: true, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+    {
+        product_name: "Sashimi", thumbnail: "https://www.japan-guide.com/g7/2035_sashimi.jpg", 
+        unit_price: 80, discount_price: 60, discount_active: true, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+    {
+        product_name: "Ramen", thumbnail: "https://www.japan-guide.com/g7/2035_ramen.jpg", 
+        unit_price: 130, discount_price: 100, discount_active: true, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+    {
+        product_name: "Yakisoba", thumbnail: "https://www.japan-guide.com/g7/2035_yakisoba.jpg", 
+        unit_price: 150, discount_price: 140, discount_active: false, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+    {
+        product_name: "Tonkatsu", thumbnail: "https://www.japan-guide.com/g7/2035_tonkatsu.jpg", 
+        unit_price: 280, discount_price: 260, discount_active: false, status: "active",
+        created_date: new Date(), updated_date: new Date()
+    },
+]);
