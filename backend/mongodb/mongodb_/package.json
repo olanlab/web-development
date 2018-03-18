@@ -1,8 +1,8 @@
 {
-  "name": "mongoose_",
+  "name": "mongodb_",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "insert.1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^3.0.4",
-    "mongoose": "^5.0.0-rc2"
+    "mongodb": "^3.0.4"
   }
 }
