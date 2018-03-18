@@ -1,0 +1,12 @@
+db.users.deleteMany({});
+============================================================
+db.users.insertMany([
+    {firstname: "Olan", lastname: "Samritjiarapon", email: "olan@olanlab.com", age: 33, status: "active"},
+    {firstname: "Sara", lastname: "JR", email: "sara@gmail.com", age: 19, status: "active"},
+    {firstname: "John", lastname: "Gerrand", email: "john@gmail.com", age: 33, status: "active"},
+    {firstname: "Mary", lastname: "Gig", email: "mary@gmail.com", age: 42, status: "active"},
+    {firstname: "Jimmy", lastname: "Beckham", email: "jimmy@gmail.com", age: 24, status: "pending"},
+    {firstname: "Tony", lastname: "Bee", email: "tony@gmail.com", age: 15, status: "pending"},
+    {firstname: "Hope", lastname: "Henderson", email: "hope@gmail.com", age: 50, status: "pending"},
+    {firstname: "Bank", lastname: "Jar", email: "bank@gmail.com", age: 60, status: "pending"}
+]);
