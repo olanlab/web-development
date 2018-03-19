@@ -1,0 +1,15 @@
+extends layout
+
+
+block content
+    div.container
+        div.row
+            each user in users 
+                .col-6.col-md-4
+                    h4.text-primary= user.firstname + ' ' + user.lastname
+                    p= 'Age : ' + user.age
+                    p= 'Email : ' + user.email
+                    p(class=(user.status == 'active' ? 'text-success' : 'text-danger'))= 'Status : ' + user.status
+                    hr
+
+

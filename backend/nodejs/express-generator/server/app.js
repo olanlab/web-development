@@ -5,8 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+// mongoDB CONNECT
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/shopper');
+mongoose.Promise = global.Promise;
+
+var index = require('./routes/indexRoutes');
+var users = require('./routes/userRoutes');
 
 var app = express();
 
