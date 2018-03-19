@@ -6,7 +6,7 @@ MongoClient.connect(url, function(err, client) {
 	console.log("Database created!");
 	
 	const db = client.db("shopper");
-	db.collection("users").find({}).toArray((err, docs) => {
+	db.collection("users").find({age: 33}).toArray((err, docs) => {
 		if (err) throw err;
 		console.log(docs);
 		client.close();
