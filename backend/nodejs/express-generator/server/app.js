@@ -10,8 +10,6 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/shopper');
 mongoose.Promise = global.Promise;
 
-var index = require('./routes/indexRoutes');
-var users = require('./routes/userRoutes');
 
 var app = express();
 
@@ -27,8 +25,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// WEB
+var index = require('./routes/indexRoutes');
+var users = require('./routes/userRoutes');
 app.use('/', index);
 app.use('/users', users);
+// API
+var usersApi = require('./routes/api/userRoutes');
+app.use('/api/users', usersApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
