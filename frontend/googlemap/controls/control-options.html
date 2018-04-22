@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<title>Control options</title>
+	<style>
+		html,
+		body,
+		#map-canvas {
+			height: 100%;
+			margin: 0px;
+			padding: 0px
+		}
+	</style>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZY5w8gxRkBkCwqmx_SPEelTAiLQVt5s"></script>
+
+	<script>
+		function initialize() {
+			var mapOptions = {
+				zoom: 4,
+				center: new google.maps.LatLng(-33, 151),
+				mapTypeControl: true,
+				mapTypeControlOptions: {
+					style: google.maps.MapTypeControlStyle.DEFAULT,
+					mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.TERRAIN]
+				},
+				zoomControl: true,
+				zoomControlOptions: {
+					style: google.maps.ZoomControlStyle.SMALL
+				}
+			};
+			var map = new google.maps.Map(document.getElementById('map-canvas'),
+				mapOptions);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</head>
+
+<body>
+	<div id="map-canvas"></div>
+</body>
+
+</html>

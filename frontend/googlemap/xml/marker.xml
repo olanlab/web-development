@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<markers>
+	<marker>
+		<name>M1</name>
+		<address>Chaingmai</address>
+		<lat>18.7061</lat>
+		<lng>98.9817</lng>
+	</marker>
+	<marker>
+		<name>M2</name>
+		<address>Bangkok</address>
+		<lat>13.7563</lat>
+		<lng>100.5018</lng>
+	</marker>
+	<marker>
+		<name>M3</name>
+		<address>Phuket</address>
+		<lat>7.9519</lat>
+		<lng>98.3381</lng>
+	</marker>
+	<marker>
+		<name>M4</name>
+		<address>Khon Kaen</address>
+		<lat>16.4419</lat>
+		<lng>102.8360</lng>
+	</marker>
+</markers>
