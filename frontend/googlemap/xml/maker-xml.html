@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Simple Map</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<style>
+		html,
+		body,
+		#map-canvas {
+			height: 100%;
+			margin: 0px;
+			padding: 0px
+		}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_ZY5w8gxRkBkCwqmx_SPEelTAiLQVt5s"></script>
+	<script>
+		var map = null;
+		function initialize() {
+			var mapOptions =
+				{
+					zoom: 12,
+					center: new google.maps.LatLng(53.3478, -6.2597)
+				};
+			map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			loadXMLFile();
+		}
+
+		function loadXMLFile() {
+			var filename = 'marker.xml';
+			$.ajax({ type: "GET", url: filename, dataType: "xml", success: parseXML, error: onXMLLoadFailed });
+
+			function onXMLLoadFailed() {
+				alert("An Error has occurred.");
+			}
+
+			function parseXML(xml) {
+				var bounds = new google.maps.LatLngBounds();
+				$(xml).find("marker").each(function () {
+					var nme = $(this).find('name').text();
+					var address = $(this).find('address').text();
+					var lat = $(this).find('lat').text();
+					var lng = $(this).find('lng').text();
+					
+					var markerCoords = new google.maps.LatLng(parseFloat(lat), parseFloat(lng));
+					bounds.extend(markerCoords);
+
+					var contentString = '<div style="font-size: 18px;">NAME : ' + nme + '<br>ADDRESS : ' + address + '<br></div>';
+					var infowindow = new google.maps.InfoWindow({
+						content: contentString
+					});
+					var marker = new google.maps.Marker({
+						position: markerCoords,
+						map: map
+					});
+					google.maps.event.addListener(marker, 'click', function () {
+						infowindow.open(map, marker);
+					});
+				});
+				map.fitBounds(bounds);
+			}
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</head>
+
+<body>
+	<div id="map-canvas"></div>
+</body>
+
+</html>
