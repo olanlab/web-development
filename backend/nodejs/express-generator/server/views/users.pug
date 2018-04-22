@@ -2,14 +2,89 @@ extends layout
 
 
 block content
-    div.container
-        div.row
-            each user in users 
-                .col-6.col-md-4
-                    h4.text-primary= user.firstname + ' ' + user.lastname
-                    p= 'Age : ' + user.age
-                    p= 'Email : ' + user.email
-                    p(class=(user.status == 'active' ? 'text-success' : 'text-danger'))= 'Status : ' + user.status
-                    hr
+
+
+    .container
+        .row
+            
+                        
+
+            .col-12.col-sm-6
+                h2= (user ? 'EDIT USER' : 'ADD USER')
+                form(action=(user ? "/users/edit/" + user._id : '/users/add'), method="post")
+                    .row
+                        .form-group.col-6
+                            label(for="") Firstname
+                            input(type="text", name="firstname", class="form-control" value=(user ? user.firstname : ''))
+                        .form-group.col-6
+                            label(for="") Lastname
+                            input(type="text", name="lastname", class="form-control" value=(user ? user.lastname : ''))
+                    .row
+                        .form-group.col-6
+                            label(for="") Email
+                            input(type="text", name="email", class="form-control" value=(user ? user.email : ''))
+                        .form-group.col-6
+                            label(for="") Age
+                            input(type="text", name="age", class="form-control" value=(user ? user.age : ''))
+                    .row
+                        .form-group.col-12
+                            label(for="") Status
+                            select(name="status", class="form-control")
+                                option(value="active"  selected=(user && user.status == "active")) active
+                                option(value="pending" selected=(user && user.status == "pending") ) pending
+                    .row
+                        .form-group.col-6
+                            button(type="submit").btn.btn-block.btn-success= (user ? 'EDIT' : 'ADD')
+                        .form-group.col-6
+                            button(type="reset").btn.btn-block.btn-warning RESET
+            
+            .col-12.col-sm-5.offset-sm-1
+                h2 SEARCH USERS
+                form(action="/users/search", method="post")
+                    .row
+                        .form-group.col-6
+                            label(for="") Firstname
+                            input(type="text", name="firstname", class="form-control" )
+                        .form-group.col-6
+                            label(for="") Lastname
+                            input(type="text", name="lastname", class="form-control" )
+                    .row
+                        .form-group.col-6
+                            label(for="") Email
+                            input(type="text", name="email", class="form-control" )
+                        .form-group.col-6
+                            label(for="") Age
+                            input(type="text", name="age", class="form-control" )
+                    .row
+                        .form-group.col-12
+                            label(for="") Status
+                            select(name="status", class="form-control")
+                                option(value=""  ) select
+                                option(value="active"  ) active
+                                option(value="pending" ) pending
+                    .row
+                        .form-group.col-12
+                            button(type="submit").btn.btn-block.btn-info SEARCH
+            
+
+    if users
+        hr
+        div.container
+            h2 USERS
+            div.row
+                each user in users 
+                    .col-12.col-sm-6.col-md-4
+                        h4.text-primary= user.firstname + ' ' + user.lastname
+                        p= 'Age : ' + user.age
+                        p= 'Email : ' + user.email
+                        p(class=(user.status == 'active' ? 'text-success' : 'text-danger'))= 'Status : ' + user.status
+                        div
+                            ul.list-inline
+                                li.list-inline-item
+                                    a(href="/users/edit/"  + user._id).btn.btn-primary EDIT
+                                li.list-inline-item
+                                    form(action="/users/delete/" + user._id, method="post")
+                                        button(type="submit").btn.btn-danger DEL
+                        hr
 
 
