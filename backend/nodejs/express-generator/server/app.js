@@ -4,10 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var keys = require('./config/keys');
 
 // mongoDB CONNECT
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/shopper');
+mongoose.connect(keys.mongoURI); 
 mongoose.Promise = global.Promise;
 
 var app = express();
