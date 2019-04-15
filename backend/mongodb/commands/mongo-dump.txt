@@ -1,0 +1,7 @@
+// DUMP
+mongodump -d <database_name> -o <directory_backup>
+mongodump -u <username> -p <password> --authenticationDatabase admin -d <database_name> -o <directory_backup>
+
+// RESTORE
+mongorestore -d <database_name> <directory_backup>
+mongorestore -u <username> -p <password> --authenticationDatabase admin -d <database_name> <directory_backup>
