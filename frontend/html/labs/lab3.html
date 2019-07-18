@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>javascript: calculate</title>
+		<meta charset="windows-1252" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <script src="main.js"></script> -->
+	</head>
+	<body>
+		<h1>วันนี้กินอะไรดี</h1>
+		<!-- <button onclick="myFunction()">เดินออกกำลังกาย อยากเดินสิ</button><br>
+        <button onclick="myFunction()">ไม่อยากหรอกนะ</button><br><br> -->
+
+		<p id="message"></p>
+		<p id="choice"></p>
+		
+		<select id="demo2" style="display:none;" onchange="Number()">
+			<option value=" "> </option>
+			<option value="1">ร้าน 1</option>
+			<option value="2">ร้าน 2</option>
+		</select>
+		<select id="demo" style="display:none;" onchange="Number()">
+			<option value=" "> </option>
+			<option value="1">Select::1</option>
+			<option value="2">Select::2</option>
+			<option value="3">Select::3</option>
+			<option value="4">Select::4</option>
+		</select>
+	</body>
+	<script>
+		var percent = prompt("please enter percent number that you want to walk");
+		if (percent >= 70) {
+			document.getElementById("message").innerHTML = "อยากเดินใช่มั้ย<br/>";
+			document.getElementById("demo2").style.display = "inline";
+		} else {
+			document.getElementById("message").innerHTML = "สั้งเเกร๊ปเถอะ<br/>";
+			document.getElementById("demo").style.display = "inline";
+		}
+		function Number() {
+			var food = document.getElementById("demo").value;
+			switch (food) {
+				case "1":
+					document.getElementById("choice").innerHTML = "grab แล้วกัน ร้านไหนก็ได้ที่เป็นก๋วยเตี๋ยว";
+					// console.log('Oranges are $0.59 a pound.');
+					break;
+				case "2":
+					document.getElementById("choice").innerHTML = "grab ร้านข้าว";
+					break;
+				case "3":
+					document.getElementById("choice").innerHTML = "grab ร้านอะไรก็กิน";
+					//  console.log('Mangoes and papayas are $2.79 a pound.');
+					// expected output: "Mangoes and papayas are $2.79 a pound."
+					break;
+				default:
+					document.getElementById("choice").innerHTML = "ร้านก๋วยเตี๋ยวในซอยที่โทรสั่ง";
+				//  console.log('Sorry, we are out of ' + expr + '.');
+			}
+		}
+	</script>
+</html>
